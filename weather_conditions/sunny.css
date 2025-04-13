@@ -1,0 +1,31 @@
+/* SUNNY WEATHER (sunny.css) */
+.sun {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffdd00, #ffaa00);
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(255, 221, 0, 0.6);
+    animation: sun-pulse 3s ease-in-out infinite alternate, sun-spin 20s linear infinite;
+  }
+  
+  @keyframes sun-pulse {
+    0% {
+      box-shadow: 0 0 60px rgba(255, 221, 0, 0.6);
+    }
+    100% {
+      box-shadow: 0 0 100px rgba(255, 221, 0, 0.8);
+    }
+  }
+  
+  @keyframes sun-spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }

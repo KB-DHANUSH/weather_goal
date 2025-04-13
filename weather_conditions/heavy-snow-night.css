@@ -1,0 +1,98 @@
+.moon {
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 70% 20%, #e0e0e0, #b0b0b0);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    opacity: 0.6;
+  }
+  
+  .cloud {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 60px;
+    background: linear-gradient(to bottom, #2a3540, #1a2530);
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+  
+  .cloud:before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom, #2a3540, #1a2530);
+    border-radius: 50%;
+    top: -40px;
+    left: 25px;
+  }
+  
+  .cloud:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #2a3540, #1a2530);
+    border-radius: 50%;
+    top: -45px;
+    left: 60px;
+  }
+  
+  .snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  }
+  
+  .snowflake-1 { left: 30%; top: 50%; animation: hsn-snow-fall 4s infinite ease-in-out 0.0s; }
+  .snowflake-2 { left: 36%; top: 50%; animation: hsn-snow-fall 4.5s infinite ease-in-out 0.2s; }
+  .snowflake-3 { left: 42%; top: 50%; animation: hsn-snow-fall 5s infinite ease-in-out 0.4s; }
+  .snowflake-4 { left: 48%; top: 50%; animation: hsn-snow-fall 4.2s infinite ease-in-out 0.3s; }
+  .snowflake-5 { left: 54%; top: 50%; animation: hsn-snow-fall 4.8s infinite ease-in-out 0.1s; }
+  .snowflake-6 { left: 60%; top: 50%; animation: hsn-snow-fall 5.2s infinite ease-in-out 0.5s; }
+  .snowflake-7 { left: 66%; top: 50%; animation: hsn-snow-fall 4.7s infinite ease-in-out 0.2s; }
+  .snowflake-8 { left: 33%; top: 50%; animation: hsn-snow-fall 5.5s infinite ease-in-out 0.6s; }
+  .snowflake-9 { left: 45%; top: 50%; animation: hsn-snow-fall 4.0s infinite ease-in-out 0.3s; }
+  .snowflake-10 { left: 58%; top: 50%; animation: hsn-snow-fall 5.3s infinite ease-in-out 0.4s; }
+  .snowflake-11 { left: 62%; top: 50%; animation: hsn-snow-fall 4.8s infinite ease-in-out 0.7s; }
+  .snowflake-12 { left: 40%; top: 50%; animation: hsn-snow-fall 5.0s infinite ease-in-out 0.8s; }
+  
+  .star {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #ffffff;
+    opacity: 0.5;
+  }
+  
+  .star-1 { top: 10%; left: 20%; width: 2px; height: 2px; animation: star-twinkle 3s infinite ease-in-out 0.5s; }
+  .star-2 { top: 15%; left: 40%; width: 2px; height: 2px; animation: star-twinkle 4s infinite ease-in-out 0s; }
+  .star-3 { top: 8%; left: 85%; width: 1px; height: 1px; animation: star-twinkle 5s infinite ease-in-out 1s; }
+  
+  @keyframes hsn-snow-fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateY(50px) rotate(180deg) translateX(5px);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(100px) rotate(360deg) translateX(-5px);
+      opacity: 0;
+    }
+  }
+  

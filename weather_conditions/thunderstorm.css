@@ -1,0 +1,94 @@
+/* THUNDERSTORM (thunderstorm.css) */
+.cloud {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 60px;
+  background: linear-gradient(to bottom, #4a5258, #2c3136);
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.cloud:before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(to bottom, #4a5258, #2c3136);
+  border-radius: 50%;
+  top: -40px;
+  left: 25px;
+}
+
+.cloud:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom, #4a5258, #2c3136);
+  border-radius: 50%;
+  top: -45px;
+  left: 60px;
+}
+
+.lightning {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 60px;
+  background: rgba(255, 255, 150, 0.9);
+  clip-path: polygon(50% 0%, 0% 40%, 50% 40%, 0% 100%, 100% 40%, 50% 40%);
+  z-index: 3;
+  animation: lightning-flash 3s infinite;
+  box-shadow: 0 0 30px rgba(255, 255, 150, 0.7);
+}
+
+.droplet {
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background: linear-gradient(to bottom, rgba(100, 140, 230, 0.4), rgba(100, 140, 230, 0.8));
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+}
+
+.droplet-1 { left: 30%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.0s; }
+.droplet-2 { left: 36%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.2s; }
+.droplet-3 { left: 42%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.4s; }
+.droplet-4 { left: 48%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.3s; }
+.droplet-5 { left: 54%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.1s; }
+.droplet-6 { left: 60%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.5s; }
+.droplet-7 { left: 66%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.2s; }
+.droplet-8 { left: 40%; top: 50%; animation: thunder-rain-fall 1.2s infinite ease-in 0.6s; }
+
+@keyframes lightning-flash {
+  0%, 50%, 100% {
+    opacity: 0;
+  }
+  48%, 49% {
+    opacity: 0;
+  }
+  49.5% {
+    opacity: 1;
+  }
+}
+
+@keyframes thunder-rain-fall {
+  0% {
+    transform: translateY(0) scaleY(1) skewX(-15deg);
+    opacity: 0.9;
+  }
+  80% {
+    transform: translateY(90px) scaleY(1.2) skewX(-15deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(120px) scaleY(0.1) skewX(-15deg);
+    opacity: 0;
+  }
+}

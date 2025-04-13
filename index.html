@@ -6,52 +6,77 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="app-container">
         <header>
             <div class="logo">
-                <img src="placeholder-logo.png" alt="Logo">
-                <span></span>
+                <span>Climatic</span>
             </div>
-            <div class="nav-item">Weather</div>
+            <nav class="nav-items">
+                <div class="nav-item active">Home</div>
+                <div class="nav-item">Forecast</div>
+                <div class="nav-item">About</div>
+            </nav>
             <div class="right-icons">
-                <div class="profile-icon">
-                    <img src="/api/placeholder/24/24" alt="Profile">
-                </div>
-                <div class="menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button id="update">Update</button>
             </div>
         </header>
 
         <main>
             <div class="left-section">
                 <div class="greeting">
-                    <h1>Good<br>Morning</h1>
-                    <p>Hey Mark, it's a perfect for a<br>morning walk!</p>
+                    <h1>Good Morning</h1>
+                    <p>Hey Dhanush, it's a perfect day for a morning walk!</p>
                 </div>
-                
-                <div class="wind-info">
-                    <div class="wind-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" stroke="#FF5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+
+                <div class="weather-stats">
+                    <div class="temperature-info l_block">
+                        <div class="temperature-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="temperature-details">
+                            <h3>Temperature</h3>
+                            <p id="temp">18°C</p>
+                            <span>High: 22°C • Low: 12°C</span>
+                        </div>
                     </div>
-                    <div class="wind-details">
-                        <h3>Wind</h3>
-                        <p>Medium/Light</p>
-                        <span>From Northwest</span>
+                    <div class="wind-info l_block">
+                        <div class="wind-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="wind-details">
+                            <h3>Wind</h3>
+                            <p>Medium/Light</p>
+                            <span>From Northwest</span>
+                        </div>
+                    </div>
+                    <div class="aqi-info l_block">
+                        <div class="aqi-icon">
+                            <i class="fas fa-smog"></i>
+                        </div>
+                        <div class="aqi-details">
+                            <h3>Air Quality</h3>
+                            <p>42</p>
+                            <span>Good</span>
+                        </div>
+                    </div>
+                    <div class="uv-info l_block">
+                        <div class="uv-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="uv-details">
+                            <h3>UV Index</h3>
+                            <p>3</p>
+                            <span>Moderate</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="center-section">
-                <!-- This is where the 3D animated weather visualization will go -->
                 <div id="weather-visualization" class="weather-visual">
-                    <!-- Placeholder for the 3D animation -->
                     <div class="cloud"></div>
                     <div class="sun"></div>
                     <div class="droplet droplet-1"></div>
@@ -61,53 +86,55 @@
             </div>
 
             <div class="right-section">
-                <div class="current-temp">
-                    <h2>27<span>°</span></h2>
-                    <div class="location">
-                        <p>Ho Chi Minh City</p>
-                        <p class="condition">Partly cloudy</p>
-                    </div>
+                <div class="location">
+                    <p id="address">Ho Chi Minh City</p>
+                    <p id="latitude">Latitude: 10.8231° N</p>
+                    <p id="longitude">Longitude: 106.6297° E</p>
                 </div>
-
+                <div class="time">
+                    <p id="date">2025-04-14</p>
+                    <p id="time">12:00:00</p>
+                </div>
                 <div class="forecast">
                     <div class="forecast-day">
                         <span>Tue</span>
                         <span>28°</span>
                         <div class="weather-icon">
-                            <img src="/api/placeholder/24/24" alt="Partly Cloudy">
+                            <i class="fas fa-cloud-sun"></i>
                         </div>
                     </div>
                     <div class="forecast-day">
                         <span>Wed</span>
                         <span>27°</span>
                         <div class="weather-icon">
-                            <img src="/api/placeholder/24/24" alt="Partly Cloudy">
+                            <i class="fas fa-cloud"></i>
                         </div>
                     </div>
                     <div class="forecast-day">
                         <span>Thu</span>
                         <span>29°</span>
                         <div class="weather-icon">
-                            <img src="/api/placeholder/24/24" alt="Partly Cloudy">
+                            <i class="fas fa-sun"></i>
                         </div>
                     </div>
                     <div class="forecast-day">
                         <span>Fri</span>
                         <span>28°</span>
                         <div class="weather-icon">
-                            <img src="/api/placeholder/24/24" alt="Partly Cloudy">
+                            <i class="fas fa-cloud-showers-heavy"></i>
                         </div>
                     </div>
                     <div class="forecast-day">
                         <span>Sat</span>
                         <span>26°</span>
                         <div class="weather-icon">
-                            <img src="/api/placeholder/24/24" alt="Partly Cloudy">
+                            <i class="fas fa-snowflake"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
