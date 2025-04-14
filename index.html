@@ -17,7 +17,7 @@
             <nav class="nav-items">
                 <div class="nav-item active">Home</div>
                 <div class="nav-item">Forecast</div>
-                <div class="nav-item">About</div>
+                <div class="nav-item" id="pick-location">Pick Location</div>
             </nav>
             <div class="right-icons">
                 <button id="update">Update</button>
@@ -29,6 +29,12 @@
                 <div class="greeting">
                     <h1>Good Morning</h1>
                     <p>Hey Dhanush, it's a perfect day for a morning walk!</p>
+                </div>
+
+                <!-- Location search area (hidden by default) -->
+                <div id="location-search" class="location-search hidden">
+                    <input type="text" id="location-input" placeholder="Enter city name...">
+                    <button id="search-button"><i class="fas fa-search"></i> Search</button>
                 </div>
 
                 <div class="weather-stats">
